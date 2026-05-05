@@ -33,6 +33,7 @@ if (count($user)) {
     session_start();
     $_SESSION['user'] = $user[0];
     $_SESSION['users'] = $users;
+    $_SESSION['role'] = $user['role'];
     session_regenerate_id(True);
     header('Location: home.php');
     // exit;
